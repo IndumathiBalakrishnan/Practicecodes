@@ -1,28 +1,52 @@
+
+import React from "react";
+import 'antd/dist/antd.css';
+import { UserOutlined } from '@ant-design/icons';
+import { EllipsisOutlined } from '@ant-design/icons';
+import Msgimage from './Msgimage.jpg';
+import { SearchOutlined } from '@ant-design/icons';
 import "./Card.css";
 import Image1 from './Image1.jpg'
 // import image4 from './image4.jpg'
 
 const CardItem = (props) => {
-  const { title, Image, ID, Name, OriginPlace, Color, Year } = props;
+   const {Image,Name,Message,Time,handleClick}=props;
+   const OnClick = () => {
+           
+    
+        handleClick(Image,Name);
+    
+  
+}
+   
+  
+  
   return (
 
-    <div>
 
-      <div className="card-container">
-        <center>
-          <h3 className="title">{title}</h3>
-          <img src={Image} className="flower-size" />
-        </center>
-        <div className="alignment">
-          <span>ID</span>:{ID}<br></br>
-          <span>Name</span>:{Name} <br></br>
-          <span>Origin Place</span>:{OriginPlace}<br></br>
-          <span>Color</span> : {Color}<br></br>
 
-        </div>
+    
 
-      </div>
-    </div>
+                <div className="imgdiv" onClick={OnClick} >
+                <img src={Image} className="image" />
+                <div className="imgcenter-text" >
+                  <h4>{Name}</h4>
+                  <p style={{ color: "gray" }}>{Message}</p>
+                </div>
+                <div className="imgrightside-text">
+                <p>{Time}</p>
+              </div>
+              </div>
+              
+          
+
+
+
+
+
+
+
+
 
   );
 };

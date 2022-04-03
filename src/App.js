@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "./Header/Header";
 import Content from "./Content/Content";
+import Card from "./Card/Card";
+
+// import Chat from "./Chat.js";
 
 
 
@@ -9,9 +12,8 @@ const App = () => {
     // React Fragment <> </>
     <>
 
-      <Header></Header>
-      <Content></Content>
-
+       <Content></Content> 
+{/* <Chat></Chat>  */}
     </>
   );
 };
